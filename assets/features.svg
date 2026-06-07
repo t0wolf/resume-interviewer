@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200">
+  <rect width="900" height="200" fill="#1a1a2e" rx="12"/>
+  <!-- Feature cards -->
+  <g>
+    <rect x="20" y="20" width="130" height="160" rx="10" fill="#16213e" stroke="#667eea" stroke-width="1.5"/>
+    <text x="85" y="60" text-anchor="middle" font-size="28">🎯</text>
+    <text x="85" y="90" text-anchor="middle" fill="white" font-size="12" font-weight="700" font-family="system-ui">Resume-Aware</text>
+    <text x="85" y="110" text-anchor="middle" fill="#888" font-size="10" font-family="system-ui">Questions from</text>
+    <text x="85" y="125" text-anchor="middle" fill="#888" font-size="10" font-family="system-ui">actual content</text>
+  </g>
+  <g>
+    <rect x="170" y="20" width="130" height="160" rx="10" fill="#16213e" stroke="#3a7bd5" stroke-width="1.5"/>
+    <text x="235" y="60" text-anchor="middle" font-size="28">🔗</text>
+    <text x="235" y="90" text-anchor="middle" fill="white" font-size="12" font-weight="700" font-family="system-ui">Follow-up</text>
+    <text x="235" y="110" text-anchor="middle" fill="#888" font-size="10" font-family="system-ui">2-level deep</text>
+    <text x="235" y="125" text-anchor="middle" fill="#888" font-size="10" font-family="system-ui">probe chains</text>
+  </g>
+  <g>
+    <rect x="320" y="20" width="130" height="160" rx="10" fill="#16213e" stroke="#ff5858" stroke-width="1.5"/>
+    <text x="385" y="60" text-anchor="middle" font-size="28">📊</text>
+    <text x="385" y="90" text-anchor="middle" fill="white" font-size="12" font-weight="700" font-family="system-ui">Difficulty</text>
+    <text x="385" y="110" text-anchor="middle" fill="#888" font-size="10" font-family="system-ui">Junior / Mid</text>
+    <text x="385" y="125" text-anchor="middle" fill="#888" font-size="10" font-family="system-ui">/ Senior</text>
+  </g>
+  <g>
+    <rect x="470" y="20" width="130" height="160" rx="10" fill="#16213e" stroke="#38ef7d" stroke-width="1.5"/>
+    <text x="535" y="60" text-anchor="middle" font-size="28">🎭</text>
+    <text x="535" y="90" text-anchor="middle" fill="white" font-size="12" font-weight="700" font-family="system-ui">Role-Specific</text>
+    <text x="535" y="110" text-anchor="middle" fill="#888" font-size="10" font-family="system-ui">LLM / CV / NLP</text>
+    <text x="535" y="125" text-anchor="middle" fill="#888" font-size="10" font-family="system-ui">/ Backend</text>
+  </g>
+  <g>
+    <rect x="620" y="20" width="130" height="160" rx="10" fill="#16213e" stroke="#f857a6" stroke-width="1.5"/>
+    <text x="685" y="60" text-anchor="middle" font-size="28">💬</text>
+    <text x="685" y="90" text-anchor="middle" fill="white" font-size="12" font-weight="700" font-family="system-ui">Coaching</text>
+    <text x="685" y="110" text-anchor="middle" fill="#888" font-size="10" font-family="system-ui">Practice with</text>
+    <text x="685" y="125" text-anchor="middle" fill="#888" font-size="10" font-family="system-ui">scoring rubric</text>
+  </g>
+  <g>
+    <rect x="770" y="20" width="110" height="160" rx="10" fill="#16213e" stroke="#ff9a3c" stroke-width="1.5"/>
+    <text x="825" y="60" text-anchor="middle" font-size="28">🌏</text>
+    <text x="825" y="90" text-anchor="middle" fill="white" font-size="12" font-weight="700" font-family="system-ui">Bilingual</text>
+    <text x="825" y="110" text-anchor="middle" fill="#888" font-size="10" font-family="system-ui">Chinese &</text>
+    <text x="825" y="125" text-anchor="middle" fill="#888" font-size="10" font-family="system-ui">English</text>
+  </g>
+</svg>

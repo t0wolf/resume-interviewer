@@ -1,157 +1,168 @@
-# Resume Interviewer
+<!-- Banner -->
+<p align="center">
+  <img src="assets/banner.svg" alt="Resume Interviewer" width="100%">
+</p>
 
-A Codex skill that simulates a senior technical interviewer — reads a candidate's resume and generates targeted, realistic interview questions.
+<p align="center">
+  <strong>AI-powered interview question generator from any resume</strong>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Codex-Skill-4F46E5?style=flat-square&logo=openai&logoColor=white" alt="Codex Skill">
+  <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="MIT License">
+  <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat-square" alt="PRs Welcome">
+  <img src="https://img.shields.io/badge/Version-1.0.0-blue?style=flat-square" alt="v1.0.0">
+</p>
+
+<p align="center">
+  📄 Feed a resume &nbsp;→&nbsp; 🧠 AI extracts signals &nbsp;→&nbsp; ❓ Get real interview questions
+</p>
+
+---
 
 ## What It Does
 
-Feed it a resume (PDF, DOCX, or plain text), and it produces a structured set of interview questions that a real interviewer would ask, covering:
+Feed it a resume (PDF, DOCX, or plain text), and it produces a **structured set of interview questions** that a real senior interviewer would ask — not generic questions, but ones tailored to the candidate's actual experience, tech stack, and project claims.
 
-- **Warm-up** — Self-intro, project overview
-- **Technical Deep-Dive** — Probes real understanding of listed skills
-- **Project Walkthrough** — Maps every resume bullet to a question
-- **System Design** — Extends projects into larger-scale challenges
-- **Behavioral** — Soft skills, teamwork, learning ability
-- **Reverse Questions** — Thoughtful questions to ask back
+<p align="center">
+  <img src="assets/architecture.svg" alt="Architecture" width="100%">
+</p>
 
 ## Features
 
-- **Resume-aware**: Questions are derived from actual resume content, not generic
-- **Follow-up chains**: Each question includes 1-2 levels of follow-up probes
-- **Difficulty tuning**: Junior / Mid / Senior levels adjust question depth and phrasing
-- **Role-specific**: Auto-detects target role (LLM, CV, NLP, Backend, etc.) and weights questions
-- **Answer coaching mode**: Practice answering one question at a time with structured feedback
-- **Bilingual**: Works with both Chinese and English resumes
+<p align="center">
+  <img src="assets/features.svg" alt="Features" width="100%">
+</p>
 
-## Installation
+| Feature | Description |
+|:---|:---|
+| **Resume-Aware** | Every question is derived from actual resume content, not pulled from a generic question bank |
+| **Follow-up Chains** | Each question includes 1-2 levels of follow-up probes to test real understanding |
+| **Difficulty Tuning** | Junior / Mid / Senior levels adjust question depth and phrasing |
+| **Role-Specific** | Auto-detects target role (LLM, CV, NLP, Backend...) and weights questions accordingly |
+| **Answer Coaching** | Practice mode: answer one question at a time, get structured feedback with a 4-dimension rubric |
+| **Bilingual** | Works seamlessly with both Chinese and English resumes |
+
+## Demo Output
+
+<p align="center">
+  <img src="assets/demo-output.svg" alt="Demo Output" width="100%">
+</p>
+
+## Question Categories
+
+| Category | Count | What It Covers |
+|:---|:---:|:---|
+| Warm-up | 1-2 | Self-intro, project overview, motivation |
+| Technical Deep-Dive | 5-8 | Concept verification, trade-off analysis, follow-up probes |
+| Project Walkthrough | 3-5 per project | Architecture, your contribution, challenges, results |
+| System Design | 1-2 | Scale up a resume project into a production system |
+| Behavioral | 2-3 | Teamwork, failure recovery, learning ability |
+| Reverse Questions | 2-3 | Smart questions to ask the interviewer |
+
+## Quick Start
+
+### 1. Install
 
 ```bash
+# Via Codex CLI
 codex skill install resume-interviewer
+
+# Or clone manually
+git clone https://github.com/YOUR_USERNAME/resume-interviewer.git \
+  ~/.codex/skills/resume-interviewer
 ```
 
-Or manually clone into your skills directory:
+### 2. Use
 
-```bash
-git clone https://github.com/YOUR_USERNAME/resume-interviewer.git ~/.codex/skills/resume-interviewer
-```
-
-## Usage
-
-### Basic: Generate Questions from Resume
+Just ask Codex:
 
 ```
 帮我根据简历生成面试题
 ```
 
 ```
-Prepare interview questions based on my resume at /path/to/resume.pdf
+Prepare interview questions from my resume at /path/to/resume.pdf
 ```
 
-### Specify Difficulty
+### 3. Options
 
-```
+```bash
+# Specify difficulty
 帮我生成高级难度的面试题
-```
-
-```
 Generate junior-level interview questions from my resume
-```
 
-### Answer Coaching Mode
-
-```
+# Coaching mode (one question at a time with feedback)
 我想练习面试，一次问一道题，我回答后你给我反馈
-```
 
-```
-Let's do a mock interview, ask me one question at a time and evaluate my answer
-```
-
-### Specify Target Role
-
-```
+# Target a specific role
 我投的是大模型算法岗，帮我生成针对性的面试题
-```
-
-```
-I'm applying for a CV engineer role, tailor the questions accordingly
-```
-
-## Output Example
-
-```markdown
-# 模拟面试题 — 潘瑞 / 大模型算法工程师
-
-> 基于简历内容生成，共 18 题，覆盖技术深度、项目细节、系统设计、行为面试四大维度。
-
----
-
-## 一、开场热身 (Warm-up)
-
-### Q1. 请做一个简短的自我介绍，并用 2-3 分钟介绍你最有代表性的项目。
-**考察点：** 表达能力、项目优先级判断、自我认知
-**参考回答方向：** 选择与目标岗位最相关的项目，突出个人贡献和量化结果
-
----
-
-## 二、技术深度 (Technical Deep-Dive)
-
-### Q2. 你在项目中使用了 LoRA 对 Qwen2-VL-7B 进行微调。LoRA 的核心原理是什么？为什么选择 LoRA 而不是全量微调？
-**考察点：** 对参数高效微调的理解深度
-**追问：** LoRA 的秩 r 是怎么选的？不同 r 值对效果有什么影响？
-
-### Q3. DPO 和 RLHF 都是偏好对齐方法，它们的核心区别是什么？你在什么场景下选择了 DPO？
-**考察点：** 对齐方法的工程选型能力
-**追问：** DPO 的 loss function 是怎样的？它有什么已知的局限性？
-...
 ```
 
 ## How It Works
 
 ```
-Resume (PDF/DOCX/Text)
-    │
-    ▼
-┌─────────────┐
-│  Parse       │  Extract: education, experience, projects, skills
-└──────┬──────┘
+Resume (PDF / DOCX / Text)
        │
        ▼
-┌─────────────┐
-│  Signal      │  Identify: quantified claims, tech choices, vague areas
-│  Extraction  │
-└──────┬──────┘
+  ┌──────────┐     Extract: education, experience,
+  │  Parse   │     projects, skills, metrics
+  └────┬─────┘
        │
        ▼
-┌─────────────┐
-│  Question    │  Apply: pattern templates, difficulty scaling, role weighting
-│  Generation  │
-└──────┬──────┘
+  ┌──────────┐     Identify: quantified claims,
+  │  Signal  │     tech choices, vague areas,
+  │  Extract │     stack trade-offs
+  └────┬─────┘
        │
        ▼
-┌─────────────┐
-│  Structure   │  Output: categorized Markdown with follow-ups and hints
-│  & Format    │
-└─────────────┘
+  ┌──────────┐     Apply: pattern templates,
+  │ Generate │     difficulty scaling, role
+  │  Q's     │     weighting, follow-up chains
+  └────┬─────┘
+       │
+       ▼
+  ┌──────────┐     Output: categorized Markdown
+  │ Format   │     with hints, follow-ups, and
+  │  & Ship  │     coaching rubric
+  └──────────┘
 ```
 
 ## Project Structure
 
 ```
 resume-interviewer/
-├── SKILL.md                          # Core skill instructions
-├── README.md                         # This file
+├── SKILL.md                        # Core skill logic & workflow
+├── README.md                       # You're reading this
+├── LICENSE                         # MIT
+├── assets/
+│   ├── banner.svg                  # Project banner
+│   ├── architecture.svg            # Pipeline diagram
+│   ├── features.svg                # Feature cards
+│   └── demo-output.svg             # Output preview
 ├── references/
-│   ├── question-patterns.md          # Question taxonomy & generation rules
-│   └── evaluation-rubric.md          # Answer scoring criteria
+│   ├── question-patterns.md        # Question taxonomy & generation rules
+│   └── evaluation-rubric.md        # Answer scoring criteria (4 dimensions)
 └── examples/
-    └── sample-output.md              # Example generated questions
+    └── sample-output.md            # Full 22-question example output
 ```
+
+## Answer Coaching Rubric
+
+In coaching mode, each answer is scored on 4 dimensions (1-5 each):
+
+| Dimension | What It Measures |
+|:---|:---|
+| Completeness | Does the answer cover all key points? |
+| Depth | Can the candidate explain "why", not just "what"? |
+| Clarity | Is the answer well-structured and easy to follow? |
+| Authenticity | Does it sound like real experience, not rehearsed? |
 
 ## Requirements
 
-- Codex CLI or Codex Desktop
-- Python 3.8+ (for `.docx` resume parsing)
-- `python-docx` package (only if parsing `.docx` files)
+- [Codex CLI](https://github.com/openai/codex) or Codex Desktop
+- Python 3.8+ (for `.docx` parsing)
+- `python-docx` package (only for `.docx` files)
 
 ```bash
 pip install python-docx
@@ -159,23 +170,33 @@ pip install python-docx
 
 ## Contributing
 
-1. Fork this repository
-2. Create your feature branch (`git checkout -b feature/new-pattern`)
+Contributions are welcome! Here's how:
+
+1. Fork this repo
+2. Create a branch (`git checkout -b feature/new-role-patterns`)
 3. Add question patterns to `references/question-patterns.md`
 4. Test with real resumes
-5. Submit a pull request
+5. Open a PR
 
-### Adding New Question Patterns
+### Adding New Role Patterns
 
-To add patterns for a new role or domain, edit `references/question-patterns.md` and add a new section following the existing format. Include:
+Edit `references/question-patterns.md` and add a section following the existing format:
 - Question template with `{placeholder}` syntax
 - 2-3 concrete examples
-- Generation rules (how many to produce, what to prioritize)
+- Generation rules (count, priority, difficulty)
 
-## License
+## Star History
 
-MIT License. See [LICENSE](LICENSE) for details.
+If you find this useful, give it a star so others can find it too!
 
-## Acknowledgments
+<p align="center">
+  <a href="https://star-history.com/#YOUR_USERNAME/resume-interviewer&Date">
+    <img src="https://api.star-history.com/svg?repos=YOUR_USERNAME/resume-interviewer&type=Date" width="600" alt="Star History">
+  </a>
+</p>
 
-Built as a [Codex Skill](https://github.com/openai/codex) — designed to make interview preparation accessible and personalized.
+---
+
+<p align="center">
+  Built as a <a href="https://github.com/openai/codex">Codex Skill</a> — making interview prep personal, not generic.
+</p>

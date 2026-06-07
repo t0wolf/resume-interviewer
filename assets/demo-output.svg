@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
+  <defs>
+    <linearGradient id="headerBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#667eea"/><stop offset="100%" style="stop-color:#764ba2"/>
+    </linearGradient>
+  </defs>
+  <!-- Window frame -->
+  <rect width="800" height="520" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+  <!-- Title bar -->
+  <rect x="0" y="0" width="800" height="36" rx="12" fill="#161b22"/>
+  <rect x="0" y="24" width="800" height="12" fill="#161b22"/>
+  <circle cx="22" cy="18" r="6" fill="#ff5f57"/><circle cx="42" cy="18" r="6" fill="#febc2e"/><circle cx="62" cy="18" r="6" fill="#28c840"/>
+  <text x="400" y="23" text-anchor="middle" fill="#8b949e" font-size="12" font-family="system-ui">resume-interviewer — output.md</text>
+  <!-- Content -->
+  <text x="30" y="65" fill="#58a6ff" font-size="18" font-weight="700" font-family="system-ui">模拟面试题 — 大模型算法工程师</text>
+  <text x="30" y="90" fill="#8b949e" font-size="12" font-family="system-ui">基于简历内容生成，共 22 题，覆盖技术深度、项目细节、系统设计、行为面试四大维度。</text>
+  <!-- Section 1 -->
+  <rect x="30" y="105" width="740" height="1.5" fill="#21262d"/>
+  <text x="30" y="130" fill="#f0883e" font-size="15" font-weight="700" font-family="system-ui">一、开场热身</text>
+  <text x="30" y="155" fill="#e6edf3" font-size="13" font-weight="600" font-family="system-ui">Q1. 请做一个简短的自我介绍，重点介绍与大模型相关的经历。</text>
+  <text x="50" y="175" fill="#7ee787" font-size="11" font-family="monospace">考察点：表达能力、自我定位、信息筛选</text>
+  <!-- Section 2 -->
+  <rect x="30" y="192" width="740" height="1.5" fill="#21262d"/>
+  <text x="30" y="217" fill="#f0883e" font-size="15" font-weight="700" font-family="system-ui">二、技术深度</text>
+  <text x="30" y="242" fill="#e6edf3" font-size="13" font-weight="600" font-family="system-ui">Q2. LoRA 的核心原理是什么？为什么选择 LoRA 而不是全量微调？</text>
+  <text x="50" y="262" fill="#7ee787" font-size="11" font-family="monospace">考察点：参数高效微调的理解深度</text>
+  <text x="50" y="280" fill="#d2a8ff" font-size="11" font-family="monospace">追问：秩 r 怎么选？r=8 vs r=64 效果差多少？</text>
+  <text x="30" y="305" fill="#e6edf3" font-size="13" font-weight="600" font-family="system-ui">Q3. DPO 和 RLHF 的核心区别是什么？为什么选择 DPO？</text>
+  <text x="50" y="325" fill="#7ee787" font-size="11" font-family="monospace">考察点：对齐方法的工程选型能力</text>
+  <!-- Section 3 -->
+  <rect x="30" y="342" width="740" height="1.5" fill="#21262d"/>
+  <text x="30" y="367" fill="#f0883e" font-size="15" font-weight="700" font-family="system-ui">三、项目深度</text>
+  <text x="30" y="392" fill="#e6edf3" font-size="13" font-weight="600" font-family="system-ui">Q4. GraphRAG 中 100% 精准召回是怎么定义和测量的？</text>
+  <text x="50" y="412" fill="#7ee787" font-size="11" font-family="monospace">考察点：对自己声称指标的验证能力</text>
+  <!-- Section 4 -->
+  <rect x="30" y="430" width="740" height="1.5" fill="#21262d"/>
+  <text x="30" y="455" fill="#f0883e" font-size="15" font-weight="700" font-family="system-ui">四、系统设计</text>
+  <text x="30" y="478" fill="#e6edf3" font-size="13" font-weight="600" font-family="system-ui">Q5. 每天处理 10 万张图像的部署架构你会怎么设计？</text>
+  <text x="50" y="498" fill="#7ee787" font-size="11" font-family="monospace">考察点：系统设计能力、工程落地思维</text>
+</svg>
